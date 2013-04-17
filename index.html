@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>jQuery Time Elapse</title>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="jquery.timeelapse.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h2 id='h'></h2>
+		<script type="text/javascript">
+		<!--
+			$.timeelapse.settings.showMsecs = true;
+			$.timeelapse.settings.patterns = {			
+				milliseconds : '%d毫秒',
+				seconds: '%d秒',
+				minutes: '%d分',
+				hours: '%d小时',
+				days: '%d天',
+				years: '%d年',
+				separator: ' '
+			};
+			
+			var deltaMsecs = 100000000000 * Math.random();
+			var str = $.timeelapse(deltaMsecs);
+			$('#h').text(str);
+		//-->
+		</script>
+	</body>
+</html>
