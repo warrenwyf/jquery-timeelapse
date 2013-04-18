@@ -1,0 +1,27 @@
+{
+  "name": "timeelapse",
+  "version": "1.0.0",
+  "title": "jQuery Time Elapse",
+  "author": {
+    "name": "Wu Yongfeng",
+    "email": "warrenwyf@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.2.1"
+  },
+  "description": "It is a jQuery plugin that makes it easier to support elpase time expressing. e.g. 3 Hours 30 m 7 s .",
+  "keywords": [
+    "time",
+    "elapse",
+    "readable"
+  ],
+  "homepage": "https://github.com/warrenwyf/jquery-timeelapse",
+  "docs": "https://github.com/warrenwyf/jquery-timeelapse#readme",
+  "bugs": "https://github.com/warrenwyf/jquery-timeelapse/issues"
+}
