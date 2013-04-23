@@ -10,7 +10,7 @@
  * Project home:
  * https://github.com/warrenwyf/jquery-timeelapse
  *
- * Version: 1.0.0
+ * Version: 1.0.1
  *
  */
  (function($){
@@ -38,14 +38,23 @@
 		* Replace %d in pattern with the number.
 		*/
 		getString: function(patternName, number) {
-			if( patternName && number > 0 ){
+			if( patternName ){
 				var p = this.settings.patterns[patternName];
 				if(p===undefined)
 					return;
-				if(patternName==='milliseconds' && !this.settings.showMsecs)
-					return;				
 				
-				return p.replace(/%d/g, number);
+				if( number > 0 ){
+					if(patternName==='milliseconds' && !this.settings.showMsecs)
+						return;				
+				
+					return p.replace(/%d/g, number);
+				} else if ( number == 0 ) {
+					if(patternName==='milliseconds' && this.settings.showMsecs){
+						return p.replace(/%d/g, number);
+					} else if(patternName==='seconds' && !this.settings.showMsecs){
+						return p.replace(/%d/g, number);
+					}
+				}
 			}
 		},
 	
